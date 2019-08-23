@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MistyInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cin-1Y-LF5">
+                                <rect key="frame" x="143" y="634" width="128" height="128"/>
+                                <color key="backgroundColor" red="0.29883258400000001" green="0.23756813069999999" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="lGP-Sm-mFw"/>
+                                    <constraint firstAttribute="width" secondItem="cin-1Y-LF5" secondAttribute="height" multiplier="1:1" id="zJM-3Y-RwD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPz-dA-MVo">
+                                <rect key="frame" x="143" y="634" width="128" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="aJl-gf-iS3"/>
+                                    <constraint firstAttribute="height" constant="128" id="pEe-RL-Q7i"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="mic">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="micTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Tu4-YF-Htu"/>
+                                    <action selector="micTouchUp:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="0EE-Xp-fLw"/>
+                                    <action selector="micTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMs-aZ-xFv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cin-1Y-LF5" firstAttribute="centerX" secondItem="XPz-dA-MVo" secondAttribute="centerX" id="KWa-cA-pgH"/>
+                            <constraint firstItem="XPz-dA-MVo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KfY-zq-pug"/>
+                            <constraint firstItem="cin-1Y-LF5" firstAttribute="centerY" secondItem="XPz-dA-MVo" secondAttribute="centerY" id="gKC-3T-uwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XPz-dA-MVo" secondAttribute="bottom" constant="100" id="kOx-ag-Ydf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pulseView" destination="cin-1Y-LF5" id="e5V-7a-ECB"/>
+                        <outlet property="pulseViewWidth" destination="lGP-Sm-mFw" id="Y9P-kE-J6d"/>
+                        <outlet property="recordButton" destination="XPz-dA-MVo" id="ehG-P5-I2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic" width="412" height="412"/>
+    </resources>
+</document>
